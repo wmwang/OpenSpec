@@ -1,6 +1,12 @@
+---
+name: opsx-apply
+description: Implement tasks from an OpenSpec change. Use when the user wants to implement/apply a change from openspec/changes/.
+argument-hint: [change-name]
+---
+
 Implement tasks from an OpenSpec change. No CLI required.
 
-**Input**: Optionally specify a change name after `/opsx:apply` (e.g., `/opsx:apply add-auth`). If omitted, infer from conversation context or prompt the user.
+**Input**: Optionally specify a change name after `/opsx-apply` (e.g., `/opsx-apply add-auth`). If omitted, infer from conversation context or prompt the user.
 
 ---
 
@@ -33,7 +39,7 @@ If tasks.md does NOT exist:
 
 Change <name> has no tasks.md yet.
 
-Run `/opsx:propose <name>` to generate artifacts, or create tasks.md manually.
+Run `/opsx-propose <name>` to generate artifacts, or create tasks.md manually.
 ```
 Stop here.
 
@@ -49,7 +55,7 @@ If all tasks are already complete (`- [x]` only):
 **Change:** <name>
 **Progress:** All tasks complete ✓
 
-Ready to archive. Run `/opsx:archive <name>`.
+Ready to archive. Run `/opsx-archive <name>`.
 ```
 Stop here.
 
@@ -110,7 +116,7 @@ For each pending task (lines with `- [ ]`):
 - [x] Task 2
 ...
 
-All tasks complete! Run `/opsx:archive <name>` to archive this change.
+All tasks complete! Run `/opsx-archive <name>` to archive this change.
 ```
 
 **On pause (issue encountered):**

@@ -1,6 +1,12 @@
+---
+name: opsx-sync
+description: Sync delta specs from an OpenSpec change into the main specs. Use when the user wants to merge change specs back into the main openspec/specs/ directory.
+argument-hint: [change-name]
+---
+
 Sync delta specs from a change into the main specs. This is an agent-driven intelligent merge - no CLI required.
 
-**Input**: Optionally specify a change name after `/opsx:sync` (e.g., `/opsx:sync add-auth`). If omitted, prompt for selection.
+**Input**: Optionally specify a change name after `/opsx-sync` (e.g., `/opsx-sync add-auth`). If omitted, prompt for selection.
 
 ---
 

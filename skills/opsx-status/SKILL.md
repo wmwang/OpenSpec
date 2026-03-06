@@ -1,6 +1,12 @@
+---
+name: opsx-status
+description: Show the status of OpenSpec changes - list active changes, artifact completion, and task progress. Use when the user wants to see what changes exist or check progress.
+argument-hint: [change-name]
+---
+
 Show the status of OpenSpec changes - list active changes, artifact completion, and task progress. No CLI required.
 
-**Input**: Optionally specify a change name after `/opsx:status` (e.g., `/opsx:status add-auth`) to see details for one change. Without a name, shows all active changes.
+**Input**: Optionally specify a change name after `/opsx-status` (e.g., `/opsx-status add-auth`) to see details for one change. Without a name, shows all active changes.
 
 ---
 
@@ -39,7 +45,7 @@ Display:
 - [ ] 3.2 Write integration tests
 
 ### Next Action
-Run `/opsx:apply <name>` to continue implementation.
+Run `/opsx-apply <name>` to continue implementation.
 ```
 
 Adjust artifact statuses:
@@ -66,23 +72,23 @@ Display:
 
 **add-auth**
   Schema: spec-driven | Artifacts: 4/4 | Tasks: 5/7
-  Next: `/opsx:apply add-auth`
+  Next: `/opsx-apply add-auth`
 
 **fix-login-bug**
   Schema: spec-driven | Artifacts: 2/4 | Tasks: -
-  Next: `/opsx:continue fix-login-bug`
+  Next: `/opsx-continue fix-login-bug`
 
 **add-dark-mode**
   Schema: spec-driven | Artifacts: 0/4 | Tasks: -
-  Next: `/opsx:propose add-dark-mode` (no artifacts yet)
+  Next: `/opsx-propose add-dark-mode` (no artifacts yet)
 
 ---
 
 ### Commands
-- `/opsx:propose <name>` - Generate all artifacts at once
-- `/opsx:apply <name>` - Implement tasks
-- `/opsx:archive <name>` - Archive completed change
-- `/opsx:status <name>` - Detailed status for one change
+- `/opsx-propose <name>` - Generate all artifacts at once
+- `/opsx-apply <name>` - Implement tasks
+- `/opsx-archive <name>` - Archive completed change
+- `/opsx-status <name>` - Detailed status for one change
 ```
 
 ### Artifact count logic
@@ -96,15 +102,15 @@ For spec-driven schema, count 4 artifacts total:
 ### Next action suggestion
 
 Based on state:
-- 0 artifacts: "Run `/opsx:propose <name>`"
-- 1-3 artifacts (no tasks): "Run `/opsx:continue <name>`"
-- Has tasks.md with incomplete tasks: "Run `/opsx:apply <name>`"
-- All tasks complete: "Run `/opsx:archive <name>`"
+- 0 artifacts: "Run `/opsx-propose <name>`"
+- 1-3 artifacts (no tasks): "Run `/opsx-continue <name>`"
+- Has tasks.md with incomplete tasks: "Run `/opsx-apply <name>`"
+- All tasks complete: "Run `/opsx-archive <name>`"
 
 ---
 
 ## Guardrails
 
 - Only show changes in `openspec/changes/` (exclude `archive/` folder)
-- If `openspec/changes/` doesn't exist, say "No changes found. Run `/opsx:propose <name>` to create your first change."
+- If `openspec/changes/` doesn't exist, say "No changes found. Run `/opsx-propose <name>` to create your first change."
 - Keep the output concise and actionable
