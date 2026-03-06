@@ -1,6 +1,12 @@
+---
+name: opsx-continue
+description: Continue creating artifacts for an existing OpenSpec change, one at a time. Use when the user wants to continue working on a change started with /opsx-new.
+argument-hint: [change-name]
+---
+
 Continue working on an existing OpenSpec change - create the next pending artifact. No CLI required.
 
-**Input**: Optionally specify a change name after `/opsx:continue` (e.g., `/opsx:continue add-auth`). If omitted, prompt for selection.
+**Input**: Optionally specify a change name after `/opsx-continue` (e.g., `/opsx-continue add-auth`). If omitted, prompt for selection.
 
 ---
 
@@ -106,7 +112,7 @@ All artifacts are already created for this change.
 | design     | ✓ done |
 | tasks      | ✓ done |
 
-Ready for implementation. Run `/opsx:apply <name>`.
+Ready for implementation. Run `/opsx-apply <name>`.
 ```
 Stop here.
 
@@ -150,7 +156,7 @@ Show:
 | design     | ○ ready  |  ← next
 | tasks      | · waiting|
 
-Run `/opsx:continue <name>` to create the next artifact.
+Run `/opsx-continue <name>` to create the next artifact.
 ```
 
 ---
@@ -160,6 +166,6 @@ Run `/opsx:continue <name>` to create the next artifact.
 - Always read dependency artifacts before creating a new one
 - Show the artifact instructions clearly before drafting
 - Ask for user confirmation before saving
-- If the change doesn't exist, suggest `/opsx:new <name>` to create it
+- If the change doesn't exist, suggest `/opsx-new <name>` to create it
 - If user provided extra context at the start, incorporate it into the artifact
 - Do NOT skip artifact steps - follow the dependency order

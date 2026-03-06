@@ -1,6 +1,12 @@
+---
+name: opsx-verify
+description: Verify that an implementation matches the OpenSpec change artifacts (specs, tasks, design). Use when the user wants to check if implementation is complete and correct before archiving.
+argument-hint: [change-name]
+---
+
 Verify that an implementation matches the change artifacts (specs, tasks, design). No CLI required.
 
-**Input**: Optionally specify a change name after `/opsx:verify` (e.g., `/opsx:verify add-auth`). If omitted, prompt for selection.
+**Input**: Optionally specify a change name after `/opsx-verify` (e.g., `/opsx-verify add-auth`). If omitted, prompt for selection.
 
 ---
 

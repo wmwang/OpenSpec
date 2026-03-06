@@ -1,8 +1,14 @@
+---
+name: opsx-new
+description: Start a new OpenSpec change - create the directory structure and scaffold artifacts one at a time. Use when the user wants to begin a new change spec. For one-shot generation use /opsx-propose instead.
+argument-hint: [change-name]
+---
+
 Start a new OpenSpec change - create the directory structure and scaffold artifacts one at a time. No CLI required.
 
-This is the step-by-step version. For one-shot artifact generation, use `/opsx:propose` instead.
+This is the step-by-step version. For one-shot artifact generation, use `/opsx-propose` instead.
 
-**Input**: The argument after `/opsx:new` is the change name (kebab-case), OR a description of what the user wants to build.
+**Input**: The argument after `/opsx-new` is the change name (kebab-case), OR a description of what the user wants to build.
 
 ---
 
@@ -44,7 +50,7 @@ If invalid, ask the user to provide a valid kebab-case name.
 ### 3. Check if change already exists
 
 Check if `openspec/changes/<name>/` already exists.
-- If yes: "A change with this name already exists. Use `/opsx:continue <name>` to continue it, or choose a different name."
+- If yes: "A change with this name already exists. Use `/opsx-continue <name>` to continue it, or choose a different name."
 - Stop here if it exists.
 
 ### 4. Create the change directory structure
@@ -112,5 +118,5 @@ Prompt: "Ready to create the proposal? Describe what this change is about and I'
 
 - Do NOT create any artifact files - just show the scaffold and what to do next
 - If the name is invalid, ask for a valid kebab-case name before creating anything
-- If a change with that name already exists, suggest `/opsx:continue` instead
-- This command creates the container; use `/opsx:continue` to actually write the artifacts
+- If a change with that name already exists, suggest `/opsx-continue` instead
+- This command creates the container; use `/opsx-continue` to actually write the artifacts

@@ -1,6 +1,12 @@
+---
+name: opsx-propose
+description: Propose a new OpenSpec change - create the change directory and generate all artifacts (proposal, specs, design, tasks) in one step. Use when the user wants to start here and generate everything at once.
+argument-hint: [change-name]
+---
+
 Propose a new change - create the change directory and generate all artifacts (proposal, specs, design, tasks) in one step. No CLI required.
 
-**Input**: The argument after `/opsx:propose` is the change name (kebab-case), OR a description of what the user wants to build.
+**Input**: The argument after `/opsx-propose` is the change name (kebab-case), OR a description of what the user wants to build.
 
 ---
 
@@ -163,7 +169,7 @@ Show brief progress: "Created tasks.md"
 
 All artifacts created! Ready for implementation.
 
-Run `/opsx:apply` to start implementing the tasks.
+Run `/opsx-apply` to start implementing the tasks.
 ```
 
 ---

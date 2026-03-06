@@ -1,6 +1,12 @@
+---
+name: opsx-archive
+description: Archive a completed OpenSpec change. Use when the user wants to archive/complete a change from openspec/changes/.
+argument-hint: [change-name]
+---
+
 Archive a completed OpenSpec change. No CLI required.
 
-**Input**: Optionally specify a change name after `/opsx:archive` (e.g., `/opsx:archive add-auth`). If omitted, prompt for selection.
+**Input**: Optionally specify a change name after `/opsx-archive` (e.g., `/opsx-archive add-auth`). If omitted, prompt for selection.
 
 ---
 
@@ -62,7 +68,7 @@ Show the combined sync summary, then use **AskUserQuestion tool**:
 If user chooses sync:
 - Use the **Agent tool** (`subagent_type: "general-purpose"`) with prompt:
   ```
-  Use the Skill tool to invoke the opsx:sync skill for change '<name>'.
+  Use the Skill tool to invoke the opsx-sync skill for change '<name>'.
   Delta spec analysis: <include the analyzed delta spec summary here>
   ```
 - Then proceed to archive regardless
