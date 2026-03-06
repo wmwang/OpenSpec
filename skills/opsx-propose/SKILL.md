@@ -77,6 +77,8 @@ Rules: Tasks MUST use `- [ ]` format. Group under `## N.` sections. Order by dep
 
 ## Steps
 
+> **Language**: All generated artifact content (proposal.md, spec.md, design.md, tasks.md) MUST be written in Traditional Chinese (繁體中文). File names and directory names remain in kebab-case English.
+
 ### 1. Determine the change name
 
 If the argument is a description (not kebab-case), derive a kebab-case name:
