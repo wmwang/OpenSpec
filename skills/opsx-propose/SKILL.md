@@ -153,6 +153,13 @@ Draft granular, checkable tasks following the format above.
 
 Show brief progress: "Created tasks.md"
 
+#### 5d. Read all artifacts, create `openspec/changes/<name>/tasks.md`
+
+Read proposal, specs, and design.
+Draft granular, checkable tasks following the format above.
+
+Show brief progress: "Created tasks.md"
+
 ### 6. Show final summary
 
 ```
