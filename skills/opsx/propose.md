@@ -129,9 +129,14 @@ Show brief progress: "Created specs/<capability>/spec.md"
 
 #### 5c. Read proposal + specs, create `openspec/changes/<name>/design.md`
 
-Determine if design.md is needed (see when-to-include criteria above).
-If needed: draft and write design.md.
-If not needed: create a minimal placeholder:
+Create a full design.md **only if any of these apply**:
+- Cross-cutting change (touches multiple unrelated areas)
+- New external dependency introduced
+- Security or performance complexity
+- Significant ambiguity in how to implement
+
+Otherwise create a minimal placeholder:
+If none apply, create a minimal placeholder:
 ```markdown
 # Design: <name>
 
