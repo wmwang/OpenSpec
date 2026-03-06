@@ -7,21 +7,21 @@ A self-contained, CLI-free version of OpenSpec implemented entirely as Claude Co
 | | Standard OpenSpec | Skill Edition |
 |---|---|---|
 | **Requires** | `openspec` CLI installed | Nothing - pure AI agent |
-| **Install** | `npm install -g @fission-ai/openspec` + `openspec update` | Copy files to `.claude/commands/opsx/` |
+| **Install** | `npm install -g @fission-ai/openspec` + `openspec update` | Copy files to `.claude/skills/` |
 | **Workflow engine** | CLI generates instructions + templates | Instructions embedded in each skill file |
 | **Schema support** | Multiple schemas via YAML config | `spec-driven` schema (built-in) |
 
 ## Installation
 
-Copy the skill files to your project's `.claude/commands/opsx/` directory:
+Copy the skill files to your project's `.claude/skills/` directory:
 
 ```bash
-mkdir -p .claude/commands/opsx
-cp path/to/skills/opsx/*.md .claude/commands/opsx/
+mkdir -p .claude/skills
+cp path/to/skills/opsx/*.md .claude/skills/
 # Don't copy README.md
 ```
 
-Then restart Claude Code. The commands will appear as `/opsx:*`.
+Then restart Claude Code. The skills will be available automatically.
 
 ## Available Commands
 
